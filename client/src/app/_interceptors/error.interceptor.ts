@@ -32,7 +32,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
           case 404:
             router.navigateByUrl('/not-found');
             break;
-          case 404:
+          case 405:
             const navigationExtras: NavigationExtras = { state: { error: error.error } }
             router.navigateByUrl('/not-found', navigationExtras);
             break;
